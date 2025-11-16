@@ -1,11 +1,11 @@
-#How to Publish to PyPi
+# How to Publish to PyPi
 
-##Dependencies 
+## Dependencies 
 setuptools, wheel, twine <br>
 Install them using <br>
 ```pip install setuptools, wheel, twine```
 
-##Project Structure (├ ─ │ └ ) <br>
+## Project Structure (├ ─ │ └ ) <br>
 
 package <br>
 ├─ package/ <br>
@@ -14,7 +14,7 @@ package <br>
 ├── setup.py <br>
 └── README.md <br>
 
-##Setup.py
+## Setup.py
 Have some boiler plate code, remove cythonize things if you don't cythonize anything <br>
 ```py
 from setuptools import setup
@@ -29,20 +29,20 @@ ext_modules=cythonize(["package_name/file_name.pyx"], language_level=3),
 )
 ```
 
-##Create MANIFEST.in if you are using cythonize
+## Create MANIFEST.in if you are using cythonize
 ```MANIFEST.in
 include package_name/*.pyx
 include package_name/*.pxd
 ```
 
-##Run the setup 
+## Run the setup 
 ```pip install build```
 ```python -m build```
 you will see a wheel file in dist/ folder <br>
 ```pip istall package_name...*.whl```
 to test your package in a sandbox env 
 
-##Add console commands
+## Add console commands
 To add console commands you need to change setup.py
 ```setup.py
 setup(
@@ -54,6 +54,6 @@ setup(
 )
 )
 ```
-##Upload
+## Upload
 ``` twine upload dist/*
 
