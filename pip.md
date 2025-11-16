@@ -5,17 +5,17 @@ setuptools, wheel, twine <br>
 Install them using <br>
 ```pip install setuptools, wheel, twine```
 
-##Project Structure (├ ─ │ └ )
+##Project Structure (├ ─ │ └ ) <br>
 
-package
-├─ package/
-│   ├─ __init__.py
-│   └─ main.py
-├── setup.py
-└── README.md
+package <br>
+├─ package/ <br>
+│   ├─ __init__.py <br>
+│   └─ main.py <br>
+├── setup.py <br>
+└── README.md <br>
 
 ##Setup.py
-Have some boiler plate code, remove cythonize things if you don't cythonize anything
+Have some boiler plate code, remove cythonize things if you don't cythonize anything <br>
 ```py
 from setuptools import setup
 from Cython.Build import cythonize
@@ -38,9 +38,9 @@ include package_name/*.pxd
 ##Run the setup 
 ```pip install build```
 ```python -m build```
-you will see a wheel file in dist/ folder
+you will see a wheel file in dist/ folder <br>
 ```pip istall package_name...*.whl```
-to test your package in a sandbox env
+to test your package in a sandbox env 
 
 ##Add console commands
 To add console commands you need to change setup.py
